@@ -1,0 +1,342 @@
+/* importing Rubik google fonts */
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap");
+
+/* creating variables for fonts and color */
+
+:root {
+  /* primary color */
+  --Pale-Violet: hsl(276, 100%, 81%); /*(sub-heading at the top of the app UI)*/
+  --Moderate-Violet: hsl(276, 55%, 52%); /*(chat on the left)*/
+  --Desaturated-DarkViolet: hsl(271, 15%, 43%); /*(chat on the right)*/
+  --Grayish-Blue: hsl(206, 6%, 79%); /*(placeholder text)*/
+  --VeryDark-Desaturated-Violet: hsl(271, 36%, 24%); /*(main heading)*/
+  --DarkGrayish-Violet: hsl(270, 7%, 64%); /*(paragraph)*/
+
+  /*Gradient*/
+  --Light-Magenta: hsl(293, 100%, 63%);
+  --Light-Violet: hsl(264, 100%, 61%);
+
+  /* Secondary color */
+
+  --White: hsl(0, 0%, 100%);
+  --Light-Grayish-Violet: hsl(270, 20%, 96%); /*(app background)*/
+  --VeryDark-Desaturated-Violet: hsl(
+    271,
+    36%,
+    24%
+  ); /*(submit button background)*/
+  --Very-Light-Magenta: hsl(289, 100%, 72%); /*(radio button outline)*/
+
+  /* fonts  */
+
+  --Rubik: "Rubik", sans-serif;
+}
+
+/* reseting default browser css and adding font */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--Rubik);
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: var(--Light-Grayish-Violet);
+    color: var(--VeryDark-Desaturated-Violet);
+}
+h1{
+    text-align: center;
+    margin-bottom: 1rem;
+}
+.bg-shape{
+    min-width: 450px;
+    min-height: 625px;
+    border-radius:0px 0px 225px 225px ;
+    position: absolute;
+    top: -10px;
+    left: -50px;
+    background: var(--Light-Magenta);
+    background: linear-gradient(180deg, var(--Light-Magenta) 0%, var(--Light-Violet) 100%);
+    z-index: -999;
+
+}
+
+.container{
+ display: flex;
+ justify-content: center;
+ align-items: center;  
+ gap: 10rem; 
+}
+
+.container .illustration{
+    width: 275px;
+    height: 525px;
+    border-radius: 25px;
+    background-color: white;
+    padding: 15px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.container .illustration .device-screen{
+    width: 100%;
+    height: 100%;
+    background-color: var(--Light-Grayish-Violet);
+    border-radius: 15px;
+    position: relative;
+}
+
+.container .illustration .device-screen .top-screen{
+    background: var(--Light-Magenta);
+    background: linear-gradient(145deg, var(--Light-Violet) 0%, var(--Light-Magenta) 100%);
+    width: 100%;
+    height: 70px;
+    border-radius: 15px 15px 5px 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container .illustration .device-screen .top-screen .notch{
+    width: 135px;
+    height: 20px;
+    background-color: var(--White);
+    border-radius: 0px 0px 15px 15px;
+}
+
+.container .illustration .device-screen .top-screen .user-box{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 15px;
+    width: 100%;
+    margin-top: 0.5rem;
+    
+
+
+}
+
+.container .illustration .device-screen .top-screen .user-box .user-options{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 7px;
+    
+}
+
+.container .illustration .device-screen .top-screen .user-box .return-icon{
+    color: var(--White);
+    font-size: .0.6rem;
+}
+
+
+
+.container .illustration .device-screen .top-screen .user-box .user-img img{
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    border: 2px solid var(--White);
+    margin-top: 0.3rem;
+}
+
+.container .illustration .device-screen .top-screen .user-box .user-options .user-info h3{
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: var(--White);
+    margin-top: 0.25rem;
+}
+
+.container .illustration .device-screen .top-screen .user-box .user-options .user-info p{
+    font-size: 0.6rem;
+    font-weight: 400;
+    line-height: 1rem;
+    color: var(--White);
+}
+
+.container .illustration .device-screen .top-screen .user-box .user-menu{
+    color: var(--White);
+    font-size: 0.6rem;
+}
+
+.container .illustration .device-screen .msg-screen{
+    width: 100%;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 8px;
+    
+    
+
+}
+
+.container .illustration .device-screen .msg-screen .recived-msg{
+    max-width: 60%;
+    padding: 5px;
+    color: var(--Moderate-Violet);
+    border-radius: 10px 10px 10px 5px;
+    background-color: hsl(276, 100%, 81%,0.3);
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+.container .illustration .device-screen .msg-screen .recived-msg p{
+    font-size: 0.5rem;
+    font-weight: 400;
+    line-height: 0.8rem;
+
+    
+}
+
+.container .content{
+    max-width: 30%;
+}
+
+.content h2{
+    font-size: 2rem;
+    line-height: 5rem;
+    color: var(--VeryDark-Desaturated-Violet);
+    letter-spacing: 1px;
+    font-weight: 700;
+}
+
+.content p{
+    font-size: 1rem;
+    line-height: 1.5rem;
+    color: var(--DarkGrayish-Violet);
+    word-spacing: 1px;
+}
+
+.container .illustration .device-screen .msg-screen .send-msg-img{
+    display: flex;
+    column-gap: 5px;
+    align-self: flex-end;
+    margin-top: 0.5rem;
+
+}
+
+.container .illustration .device-screen .msg-screen .send-msg-img img{
+    width: 30px;
+    border-radius: 5px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+
+}
+
+.container .illustration .device-screen .msg-screen .send-msg{
+    max-width: 60%;
+    padding: 5px;
+    color: var(--Desaturated-DarkViolet);
+    border-radius: 10px 10px 5px 10px;
+    background-color: var(--White);
+    align-self: flex-end;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.container .illustration .device-screen .msg-screen .send-msg p{
+    font-size: 0.5rem;
+    font-weight: 400;
+    line-height: 1rem;
+
+    
+}
+
+.container .illustration .device-screen .msg-screen .price-msg{
+    display: flex;
+    justify-content: space-between  ;
+    align-items: center;
+    max-width: 70%;
+    padding:7px 15px;
+    color: var(--White);
+    border-radius: 10px;
+    background: linear-gradient(145deg, var(--Light-Magenta) 0%, var(--Light-Violet) 100%);
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+
+}
+
+.container .illustration .device-screen .msg-screen .price-msg div{
+    display: flex;
+    gap: 5px;
+}
+
+.container .illustration .device-screen .msg-screen .price-msg img{
+    width: 15px;
+    opacity: 0.2;
+}
+
+.container .illustration .device-screen .msg-screen .price-msg p{
+    font-size: 0.5rem;
+    font-weight: 400;
+    line-height: 1rem;
+
+
+    
+}
+
+.container .illustration .device-screen .msg-screen .price-msg  span{
+    font-size: 0.8rem;
+    
+}
+
+.container .illustration .device-screen .msg-screen .msg-box{
+    display: flex;
+    justify-content: space-between  ;
+    align-items: center;
+    width: 90%;
+    margin:0 auto;
+    height: 2.5rem;
+    padding:7px;
+    color: var(--White);
+    border-radius: 50px;
+    background-color: var(--White);
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    position: absolute;
+    bottom: 15px;
+
+}
+
+.container .illustration .device-screen .msg-screen .msg-box .placeholder p{
+    color: var(--Grayish-Blue);
+    font-size: 0.6rem;
+    margin-left: 1rem;
+}
+
+.container .illustration .device-screen .msg-screen .msg-box .send-icon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--VeryDark-Desaturated-Violet);
+    padding: 5px;
+    border-radius: 50%;
+    width: 27px;
+}
+
+@media screen and (max-width:375px) {
+    .container{
+        flex-direction: column;
+        gap: 2rem;
+       }
+
+    .container .content{
+        max-width: 100%;
+        text-align: center;
+        padding:0 3rem ;
+    }
+
+    .bg-shape{
+        min-width: 400px;
+        min-height: 650px;
+        border-radius:0px 0px 225px 225px ;
+        position: absolute;
+        top: -25%;
+        left: -50%;
+        background: var(--Light-Magenta);
+        background: linear-gradient(180deg, var(--Light-Magenta) 0%, var(--Light-Violet) 100%);
+        z-index: -999;
+    
+    }
+
+    .container .illustration{
+       margin-top: 5rem;
+    }
+}
+
